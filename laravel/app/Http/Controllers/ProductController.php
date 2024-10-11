@@ -12,11 +12,17 @@ class ProductController extends Controller
     {
         $page = $request->get('page', 1);
         $perPage = 10;
+        $search = $request->get('search');
 
-        $paginatedProducts = Product::paginateProducts($page, $perPage);
+        $paginatedProducts = Product::paginateProducts($page, $perPage, $search);
+
+        //Log::channel('products')->info('Listado de productos visualizado', ['user_ip' => $request->ip(), 'page' => $page, 'search' => $search]);
 
         if ($request->ajax()) {
-            return view('products.table', ['products' => $paginatedProducts['data']])->render();
+            return response()->json([
+                'table' => view('products.table', ['products' => $paginatedProducts['data']])->render(),
+                'pagination' => view('products.pagination', ['paginator' => $paginatedProducts])->render(),
+            ]);
         }
 
         return view('products.index', ['products' => $paginatedProducts]);

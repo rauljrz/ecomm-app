@@ -37,22 +37,8 @@
                 <th>Acciones</th>
             </tr>
         </thead>
-        <tbody>
-            <div id="products-table-container">
-                @include('products.table', ['products' => $products['data']])
-            </div>
-            {{-- @foreach($products['data'] as $product)
-            <tr>
-                <td>{{ $product['id'] }}</td>
-                <td>{{ $product['title'] }}</td>
-                <td>${{ number_format($product['price'], 2) }}</td>
-                <td>{{ $product['created_at'] }}</td>
-                <td>
-                    <a href="{{ route('products.edit', $product['id']) }}" class="btn btn-sm btn-info">Editar</a>
-                    <button class="btn btn-sm btn-danger delete-product" data-id="{{ $product['id'] }}">Eliminar</button>
-                </td>
-            </tr>
-            @endforeach --}}
+        <tbody id="products-table-container">
+            @include('products.table', ['products' => $products['data']])
         </tbody>
     </table>
 
@@ -108,8 +94,8 @@ $(document).ready(function() {
             url: url,
             type: 'GET',
             success: function(data) {
-                $('#products-table-container').html($(data).find('#products-table-container').html());
-                $('#pagination-container').html($(data).find('#pagination-container').html());
+                $('#products-table-container').html(data.table);
+                $('#pagination-container').html(data.pagination);
             },
             error: function(xhr) {
                 console.error('Error cargando productos:', xhr.responseText);
@@ -120,13 +106,17 @@ $(document).ready(function() {
     $(document).on('click', '.pagination a', function(e) {
         e.preventDefault();
         var url = $(this).attr('href');
+        var searchTerm = $('#search').val();
+        if (searchTerm) {
+            url += (url.includes('?') ? '&' : '?') + 'search=' + encodeURIComponent(searchTerm);
+        }
         loadProducts(url);
     });
 
     $('#search-form').on('submit', function(e) {
         e.preventDefault();
         var searchTerm = $('#search').val();
-        loadProducts('{{ route("products.index") }}?search=' + searchTerm);
+        loadProducts('{{ route("products.index") }}?search=' + encodeURIComponent(searchTerm));
     });
 });
 </script>

@@ -77,9 +77,18 @@ class Product extends Model
         });
     }
 
-    public static function paginateProducts($page = 1, $perPage = 10)
+    public static function paginateProducts($page = 1, $perPage = 10, $search = null)
     {
         $products = self::getAllProducts();
+
+        if ($search) {
+            $products = array_filter($products, function($product) use ($search) {
+                return stripos($product['title'], $search) !== false ||
+                    stripos((string)$product['price'], $search) !== false ||
+                    stripos($product['created_at'], $search) !== false;
+            });
+        }
+
         $total = count($products);
         $pages = ceil($total / $perPage);
         $offset = ($page - 1) * $perPage;
