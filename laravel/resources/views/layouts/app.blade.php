@@ -6,7 +6,7 @@
     <title>{{ config('app.name', 'Ecomm-App') }}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
+                body {
             background-color: #0a0a0a;
             color: #00ff00;
             font-family: 'Courier New', monospace;
@@ -51,6 +51,30 @@
             border-color: #00ff00;
             box-shadow: 0 0 0 0.2rem rgba(0, 255, 0, 0.25);
             color: #00ff00;
+        }
+        /* Estilos personalizados para la paginación */
+        .pagination {
+            margin-top: 20px;
+        }
+        .page-item .page-link {
+            background-color: #1a1a1a;
+            border-color: #00ff00;
+            color: #00ff00;
+        }
+        .page-item.active .page-link {
+            background-color: #00ff00;
+            border-color: #00ff00;
+            color: #0a0a0a;
+        }
+        .page-item.disabled .page-link {
+            background-color: #1a1a1a;
+            border-color: #00ff00;
+            color: #006400;
+        }
+        .page-link:hover {
+            background-color: #006400;
+            border-color: #00ff00;
+            color: #0a0a0a;
         }
     </style>
 </head>

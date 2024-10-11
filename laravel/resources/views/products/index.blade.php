@@ -27,7 +27,7 @@
         </div>
     </div>
 
-    {{-- <table class="table" id="products-table">
+    <table class="table" id="products-table">
         <thead>
             <tr>
                 <th>ID</th>
@@ -38,7 +38,10 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($products['data'] as $product)
+            <div id="products-table-container">
+                @include('products.table', ['products' => $products['data']])
+            </div>
+            {{-- @foreach($products['data'] as $product)
             <tr>
                 <td>{{ $product['id'] }}</td>
                 <td>{{ $product['title'] }}</td>
@@ -49,16 +52,14 @@
                     <button class="btn btn-sm btn-danger delete-product" data-id="{{ $product['id'] }}">Eliminar</button>
                 </td>
             </tr>
-            @endforeach
+            @endforeach --}}
         </tbody>
-    </table> --}}
-    <div id="products-table-container">
-        @include('products.table')
+    </table>
+
+    <div id="pagination-container">
+        @include('products.pagination', ['paginator' => $products])
     </div>
 
-    <div id="pagination">
-        {{-- {{ $products->links() }} --}}
-    </div>
 </div>
 
 @endsection
@@ -107,7 +108,8 @@ $(document).ready(function() {
             url: url,
             type: 'GET',
             success: function(data) {
-                $('#products-table-container').html(data);
+                $('#products-table-container').html($(data).find('#products-table-container').html());
+                $('#pagination-container').html($(data).find('#pagination-container').html());
             },
             error: function(xhr) {
                 console.error('Error cargando productos:', xhr.responseText);
