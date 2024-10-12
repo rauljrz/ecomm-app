@@ -51,27 +51,6 @@
 @endsection
 
 @section('scripts')
-{{-- <script>
-$(document).ready(function() {
-    // Manejo de eliminación
-
-    // Manejo de búsqueda
-    $('#search-form').on('submit', function(e) {
-        e.preventDefault();
-        var searchTerm = $('#search').val();
-        $.ajax({
-            url: '{{ route("products.index") }}',
-            type: 'GET',
-            data: {
-                search: searchTerm
-            },
-            success: function(result) {
-                $('#products-table tbody').html(result);
-            }
-        });
-    });
-});
-</script> --}}
 <script>
 $(document).ready(function() {
     $('.delete-product').on('click', function() {
