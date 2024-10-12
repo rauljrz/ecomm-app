@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductRequest;
+use Illuminate\Support\Facades\Log;
 
 class ProductController extends Controller
 {
@@ -16,7 +17,7 @@ class ProductController extends Controller
 
         $paginatedProducts = Product::paginateProducts($page, $perPage, $search);
 
-        //Log::channel('products')->info('Listado de productos visualizado', ['user_ip' => $request->ip(), 'page' => $page, 'search' => $search]);
+        Log::channel('products')->info('Listado de productos visualizado', ['user_ip' => $request->ip(), 'page' => $page, 'search' => $search]);
 
         if ($request->ajax()) {
             return response()->json([
