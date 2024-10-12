@@ -54,21 +54,6 @@
 {{-- <script>
 $(document).ready(function() {
     // Manejo de eliminación
-    $('.delete-product').on('click', function() {
-        if (confirm('¿Estás seguro de que quieres eliminar este producto?')) {
-            var id = $(this).data('id');
-            $.ajax({
-                url: '/products/' + id,
-                type: 'DELETE',
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                },
-                success: function(result) {
-                    location.reload();
-                }
-            });
-        }
-    });
 
     // Manejo de búsqueda
     $('#search-form').on('submit', function(e) {
@@ -89,6 +74,22 @@ $(document).ready(function() {
 </script> --}}
 <script>
 $(document).ready(function() {
+    $('.delete-product').on('click', function() {
+        if (confirm('¿Estás seguro de que quieres eliminar este producto?')) {
+            var id = $(this).data('id');
+            $.ajax({
+                url: '/products/' + id,
+                type: 'DELETE',
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                },
+                success: function(result) {
+                    location.reload();
+                }
+            });
+        }
+    });
+
     function loadProducts(url) {
         $.ajax({
             url: url,
