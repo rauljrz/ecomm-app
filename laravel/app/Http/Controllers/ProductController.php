@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductRequest;
-use Illuminate\Support\Facades\Log;
+use App\Traits\Loggable;
 
 class ProductController extends Controller
 {
+    use Loggable;
+
     public function index(Request $request)
     {
         $page = $request->get('page', 1);
@@ -17,7 +19,7 @@ class ProductController extends Controller
 
         $paginatedProducts = Product::paginateProducts($page, $perPage, $search);
 
-        Log::channel('products')->info('Listado de productos visualizado', ['user_ip' => $request->ip(), 'page' => $page, 'search' => $search]);
+        $this->logCrudAction('viewed', 'Products list', 'page: '. $page. ' search: '.$search );
 
         if ($request->ajax()) {
             return response()->json([
@@ -37,6 +39,7 @@ class ProductController extends Controller
     public function store(ProductRequest $request)
     {
         $product = Product::createProduct($request->validated());
+        $this->logCrudAction('created', 'Product', $product['id']);
 
         if ($request->ajax()) {
             return response()->json($product);
@@ -47,6 +50,7 @@ class ProductController extends Controller
 
     public function show($id)
     {
+        $this->logCrudAction('show', 'Product', $id);
         $product = Product::getProduct($id);
 
         if (!$product) {
@@ -70,6 +74,7 @@ class ProductController extends Controller
     public function update(ProductRequest $request, $id)
     {
         $product = Product::updateProduct($id, $request->validated());
+        $this->logCrudAction('updated', 'Product ', $id);
 
         if (!$product) {
             return response()->json(['error' => 'Producto no encontrado'], 404);
@@ -85,19 +90,9 @@ class ProductController extends Controller
     public function destroy($id)
     {
         Product::deleteProduct($id);
+        $this->logCrudAction('deleted', 'Product ', $id);
 
         return response()->json(['success' => 'Producto eliminado exitosamente.']);
     }
 
-    public function search(Request $request)
-    {
-        $term = $request->get('search');
-        $products = Product::searchProducts($term);
-
-        if ($request->ajax()) {
-            return view('products.table', compact('products'))->render();
-        }
-
-        return view('products.index', compact('products'));
-    }
 }
