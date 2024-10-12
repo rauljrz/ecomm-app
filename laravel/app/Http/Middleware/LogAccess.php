@@ -16,7 +16,7 @@ class LogAccess
         $clientIp = $request->ip();
 
         $logMessage = sprintf(
-            '[%s] User %s (%s) from IP %s accessed %s %s',
+            '[%s] User: %s (%s) %s accessed %s %s',
             $clientIp,
             $userName,
             $userId,
