@@ -14,7 +14,6 @@ Route::get('/dashboard', function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-    //Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show');
 
     Route::middleware(['role:admin,editor'])->group(function () {
         Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
@@ -26,6 +25,7 @@ Route::middleware(['auth'])->group(function () {
     Route::middleware(['role:admin'])->group(function () {
         Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
     });
+    Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show');
 });
 
 Route::middleware('auth')->group(function () {
