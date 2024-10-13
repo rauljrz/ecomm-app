@@ -24,6 +24,24 @@
 $(document).ready(function() {
     $('#create-product-form').on('submit', function(e) {
         e.preventDefault();
+                
+        var title = $('#title').val();
+        var price = parseFloat($('#price').val());
+        var errors = [];
+        
+        if (title.trim() === '' || title.length < 5) {
+            errors.push('El título debe tener al menos 5 caracteres.');
+        }
+        
+        if (isNaN(price) || price <= 0) {
+            errors.push('El precio debe ser mayor que cero.');
+        }
+        
+        if (errors.length > 0) {
+            alert('Errores de validación:\n' + errors.join('\n'));
+            return;
+        }
+
         $.ajax({
             url: '{{ route("products.store") }}',
             type: 'POST',
