@@ -1,0 +1,602 @@
+[
+    {
+        "id": 1,
+        "title": "Wine - white, drinking",
+        "price": 808.23,
+        "created_at": "2023-12-15 21:55:34"
+    },
+    {
+        "id": 2,
+        "title": "Wine - Red, Cooking",
+        "price": 80849.23,
+        "created_at": "2023-12-05 21:55:34"
+    },
+    {
+        "id": 3,
+        "title": "Beets - Pickled",
+        "price": 304.11,
+        "created_at": "2024-06-20 21:15:20"
+    },
+    {
+        "id": 4,
+        "title": "Bread - Pain Au Liat X12",
+        "price": 36815.26,
+        "created_at": "2024-02-03 18:04:55"
+    },
+    {
+        "id": 5,
+        "title": "Goulash Seasoning",
+        "price": 25515.26,
+        "created_at": "2024-07-02 21:10:08"
+    },
+    {
+        "id": 6,
+        "title": "Rum - Dark, Bacardi, Black",
+        "price": 31021.38,
+        "created_at": "2023-11-01 02:24:02"
+    },
+    {
+        "id": 7,
+        "title": "Calvados - Boulard",
+        "price": 91254.96,
+        "created_at": "2024-05-06 18:39:07"
+    },
+    {
+        "id": 8,
+        "title": "Sea Urchin",
+        "price": 52357,
+        "created_at": "2024-06-10 09:19:56"
+    },
+    {
+        "id": 9,
+        "title": "Ham - Smoked, Bone - In",
+        "price": 39279.13,
+        "created_at": "2024-06-08 08:12:15"
+    },
+    {
+        "id": 10,
+        "title": "Kirsch - Schloss",
+        "price": 74552.41,
+        "created_at": "2024-03-15 05:41:24"
+    },
+    {
+        "id": 11,
+        "title": "Arctic Char - Fillets",
+        "price": 96519.32,
+        "created_at": "2024-09-02 16:05:41"
+    },
+    {
+        "id": 12,
+        "title": "Nori Sea Weed - Gold Label",
+        "price": 42648.15,
+        "created_at": "2023-12-18 13:27:08"
+    },
+    {
+        "id": 13,
+        "title": "Cloves - Ground",
+        "price": 23212.42,
+        "created_at": "2024-03-07 16:39:30"
+    },
+    {
+        "id": 14,
+        "title": "External Supplier",
+        "price": 10878.73,
+        "created_at": "2024-05-29 06:47:00"
+    },
+    {
+        "id": 15,
+        "title": "Rice - Brown",
+        "price": 74450.39,
+        "created_at": "2023-12-25 23:56:07"
+    },
+    {
+        "id": 16,
+        "title": "Milk - Chocolate 500ml",
+        "price": 41891.98,
+        "created_at": "2023-12-01 13:45:21"
+    },
+    {
+        "id": 17,
+        "title": "C - Plus, Orange",
+        "price": 31272.73,
+        "created_at": "2023-12-31 19:05:23"
+    },
+    {
+        "id": 18,
+        "title": "Bread Base - Goodhearth",
+        "price": 97791.98,
+        "created_at": "2024-07-18 19:32:19"
+    },
+    {
+        "id": 19,
+        "title": "Pepper - Julienne, Frozen",
+        "price": 10039.18,
+        "created_at": "2024-06-02 23:44:20"
+    },
+    {
+        "id": 20,
+        "title": "Container - Clear 16 Oz",
+        "price": 74306.03,
+        "created_at": "2024-03-28 22:10:03"
+    },
+    {
+        "id": 21,
+        "title": "Ecolab - Mikroklene 4\/4 L",
+        "price": 90650.4,
+        "created_at": "2024-05-04 10:06:48"
+    },
+    {
+        "id": 22,
+        "title": "Lettuce - Boston Bib",
+        "price": 75355.45,
+        "created_at": "2024-08-27 16:37:55"
+    },
+    {
+        "id": 23,
+        "title": "Foam Espresso Cup Plain White",
+        "price": 27087.61,
+        "created_at": "2024-08-23 01:28:43"
+    },
+    {
+        "id": 24,
+        "title": "Raspberries - Frozen",
+        "price": 17162.1,
+        "created_at": "2023-12-30 22:31:23"
+    },
+    {
+        "id": 25,
+        "title": "Sauce - Demi Glace",
+        "price": 45593.6,
+        "created_at": "2024-04-03 15:36:26"
+    },
+    {
+        "id": 26,
+        "title": "Kohlrabi",
+        "price": 91611.72,
+        "created_at": "2024-05-11 09:41:30"
+    },
+    {
+        "id": 27,
+        "title": "Cheese - Comtomme",
+        "price": 62658.66,
+        "created_at": "2024-06-25 16:29:10"
+    },
+    {
+        "id": 28,
+        "title": "Nut - Pine Nuts, Whole",
+        "price": 79918.37,
+        "created_at": "2024-04-13 02:05:35"
+    },
+    {
+        "id": 29,
+        "title": "Chicken Thigh - Bone Out",
+        "price": 64439.23,
+        "created_at": "2024-02-10 17:05:46"
+    },
+    {
+        "id": 30,
+        "title": "Sauce - Ranch Dressing",
+        "price": 20701,
+        "created_at": "2024-09-27 11:48:12"
+    },
+    {
+        "id": 31,
+        "title": "Chestnuts - Whole,canned",
+        "price": 69556.09,
+        "created_at": "2024-09-22 15:18:00"
+    },
+    {
+        "id": 32,
+        "title": "Quiche Assorted",
+        "price": 67945.37,
+        "created_at": "2024-03-05 09:40:53"
+    },
+    {
+        "id": 33,
+        "title": "Tea - Black Currant",
+        "price": 56667.56,
+        "created_at": "2024-01-18 17:32:29"
+    },
+    {
+        "id": 34,
+        "title": "Bagel - Whole White Sesame",
+        "price": 18458.71,
+        "created_at": "2024-05-09 10:35:33"
+    },
+    {
+        "id": 35,
+        "title": "Daves Island Stinger",
+        "price": 11596.38,
+        "created_at": "2024-08-05 22:28:58"
+    },
+    {
+        "id": 36,
+        "title": "Wine - Penfolds Koonuga Hill",
+        "price": 43164.62,
+        "created_at": "2024-02-18 15:45:35"
+    },
+    {
+        "id": 37,
+        "title": "Beer - Sleemans Honey Brown",
+        "price": 46236.98,
+        "created_at": "2024-01-13 00:40:46"
+    },
+    {
+        "id": 38,
+        "title": "Cheese - Grie Des Champ",
+        "price": 75154.81,
+        "created_at": "2024-03-08 19:49:35"
+    },
+    {
+        "id": 39,
+        "title": "Juice - Orange",
+        "price": 53001.74,
+        "created_at": "2024-01-18 10:49:10"
+    },
+    {
+        "id": 40,
+        "title": "Fond - Neutral",
+        "price": 57505.49,
+        "created_at": "2024-03-09 11:24:22"
+    },
+    {
+        "id": 41,
+        "title": "Beans - Black Bean, Preserved",
+        "price": 37450.23,
+        "created_at": "2023-11-22 00:20:02"
+    },
+    {
+        "id": 42,
+        "title": "Lemons",
+        "price": 71613.45,
+        "created_at": "2024-09-09 03:34:35"
+    },
+    {
+        "id": 43,
+        "title": "Cheese - Cottage Cheese",
+        "price": 47024.94,
+        "created_at": "2023-12-25 18:43:30"
+    },
+    {
+        "id": 44,
+        "title": "Gloves - Goldtouch Disposable",
+        "price": 60720.77,
+        "created_at": "2024-05-08 08:38:09"
+    },
+    {
+        "id": 45,
+        "title": "Tamarillo",
+        "price": 25906.15,
+        "created_at": "2024-08-29 22:45:27"
+    },
+    {
+        "id": 46,
+        "title": "Anchovy In Oil",
+        "price": 18494.04,
+        "created_at": "2024-02-13 10:13:23"
+    },
+    {
+        "id": 47,
+        "title": "Island Oasis - Banana Daiquiri",
+        "price": 99017.45,
+        "created_at": "2023-11-13 04:23:51"
+    },
+    {
+        "id": 48,
+        "title": "Papayas",
+        "price": 65318.24,
+        "created_at": "2023-12-29 00:08:19"
+    },
+    {
+        "id": 49,
+        "title": "Rabbit - Saddles",
+        "price": 20589.07,
+        "created_at": "2024-04-19 17:47:32"
+    },
+    {
+        "id": 50,
+        "title": "Beef - Shank",
+        "price": 40988.38,
+        "created_at": "2024-04-18 22:56:19"
+    },
+    {
+        "id": 51,
+        "title": "Tart Shells - Savory, 3",
+        "price": 122.18,
+        "created_at": "2023-11-12 05:20:49"
+    },
+    {
+        "id": 52,
+        "title": "Bread - Mini Hamburger Bun",
+        "price": 14107.92,
+        "created_at": "2023-12-13 19:38:15"
+    },
+    {
+        "id": 53,
+        "title": "Ham - Cooked Bayonne Tinned",
+        "price": 6485.07,
+        "created_at": "2024-07-04 06:18:58"
+    },
+    {
+        "id": 54,
+        "title": "Rum - Light, Captain Morgan",
+        "price": 59419.05,
+        "created_at": "2023-11-08 20:46:38"
+    },
+    {
+        "id": 55,
+        "title": "Wine - Red, Mosaic Zweigelt",
+        "price": 69817.31,
+        "created_at": "2023-11-30 23:46:36"
+    },
+    {
+        "id": 56,
+        "title": "Pears - Fiorelle",
+        "price": 21400.12,
+        "created_at": "2024-05-15 19:22:00"
+    },
+    {
+        "id": 57,
+        "title": "Glass Clear 8 Oz",
+        "price": 96186.49,
+        "created_at": "2024-05-14 23:18:24"
+    },
+    {
+        "id": 58,
+        "title": "Grapefruit - White",
+        "price": 39916.62,
+        "created_at": "2024-09-24 17:53:54"
+    },
+    {
+        "id": 59,
+        "title": "Bagel - Everything Presliced",
+        "price": 24935.43,
+        "created_at": "2024-04-07 01:26:36"
+    },
+    {
+        "id": 60,
+        "title": "Pickerel - Fillets",
+        "price": 18757.37,
+        "created_at": "2023-11-28 12:17:02"
+    },
+    {
+        "id": 61,
+        "title": "Cheese - Cottage Cheese",
+        "price": 23627.73,
+        "created_at": "2023-10-26 10:47:22"
+    },
+    {
+        "id": 62,
+        "title": "Lid - 0090 Clear",
+        "price": 87902.71,
+        "created_at": "2023-10-31 09:08:01"
+    },
+    {
+        "id": 63,
+        "title": "Milkettes - 2%",
+        "price": 45427.83,
+        "created_at": "2024-06-28 08:11:28"
+    },
+    {
+        "id": 64,
+        "title": "Soup V8 Roasted Red Pepper",
+        "price": 38122.64,
+        "created_at": "2024-03-03 14:25:47"
+    },
+    {
+        "id": 65,
+        "title": "Quail - Whole, Bone - In",
+        "price": 27173.23,
+        "created_at": "2024-01-28 22:37:44"
+    },
+    {
+        "id": 66,
+        "title": "Doilies - 10, Paper",
+        "price": 25700.23,
+        "created_at": "2024-03-16 13:42:30"
+    },
+    {
+        "id": 67,
+        "title": "Wine - Red, Marechal Foch",
+        "price": 24985,
+        "created_at": "2024-06-17 16:02:00"
+    },
+    {
+        "id": 68,
+        "title": "Onions - Vidalia",
+        "price": 10082.42,
+        "created_at": "2024-03-26 21:54:10"
+    },
+    {
+        "id": 69,
+        "title": "Vinegar - Balsamic",
+        "price": 77758.17,
+        "created_at": "2024-07-23 21:19:25"
+    },
+    {
+        "id": 70,
+        "title": "Latex Rubber Gloves Size 9",
+        "price": 178.88,
+        "created_at": "2024-02-25 05:46:01"
+    },
+    {
+        "id": 71,
+        "title": "Cheese - Le Cheve Noir",
+        "price": 29891.15,
+        "created_at": "2024-01-15 08:50:08"
+    },
+    {
+        "id": 72,
+        "title": "Bread - 10 Grain Parisian",
+        "price": 58046.72,
+        "created_at": "2024-07-01 18:38:57"
+    },
+    {
+        "id": 73,
+        "title": "Liquid Aminios Acid - Braggs",
+        "price": 28124.53,
+        "created_at": "2024-05-02 21:14:17"
+    },
+    {
+        "id": 74,
+        "title": "Mousse - Passion Fruit",
+        "price": 1562.96,
+        "created_at": "2024-08-07 09:25:27"
+    },
+    {
+        "id": 75,
+        "title": "Oven Mitts 17 Inch",
+        "price": 82970.88,
+        "created_at": "2024-02-23 18:24:30"
+    },
+    {
+        "id": 76,
+        "title": "Foil - 4oz Custard Cup",
+        "price": 83157.92,
+        "created_at": "2023-10-19 23:55:52"
+    },
+    {
+        "id": 77,
+        "title": "Milk - Buttermilk",
+        "price": 5692.21,
+        "created_at": "2024-02-04 10:56:14"
+    },
+    {
+        "id": 78,
+        "title": "Pork - Ham, Virginia",
+        "price": 53582.54,
+        "created_at": "2024-07-21 23:04:15"
+    },
+    {
+        "id": 79,
+        "title": "Soup Campbells Split Pea And Ham",
+        "price": 13547.37,
+        "created_at": "2024-08-29 00:44:17"
+    },
+    {
+        "id": 80,
+        "title": "Sprouts - Brussel",
+        "price": 2635.98,
+        "created_at": "2024-08-26 05:09:53"
+    },
+    {
+        "id": 81,
+        "title": "Vermouth - Sweet, Cinzano",
+        "price": 68388.16,
+        "created_at": "2024-09-16 12:03:44"
+    },
+    {
+        "id": 82,
+        "title": "Meldea Green Tea Liquor",
+        "price": 18537.53,
+        "created_at": "2024-08-30 09:37:01"
+    },
+    {
+        "id": 83,
+        "title": "Bread - Roll, Soft White Round",
+        "price": 28238.94,
+        "created_at": "2023-12-19 01:34:00"
+    },
+    {
+        "id": 84,
+        "title": "Pasta - Orecchiette",
+        "price": 66023.43,
+        "created_at": "2024-05-20 11:51:33"
+    },
+    {
+        "id": 85,
+        "title": "Vol Au Vents",
+        "price": 30758.14,
+        "created_at": "2024-09-27 08:03:26"
+    },
+    {
+        "id": 86,
+        "title": "Tea - Green",
+        "price": 62239.72,
+        "created_at": "2024-03-28 21:43:56"
+    },
+    {
+        "id": 87,
+        "title": "Wine - Sicilia Igt Nero Avola",
+        "price": 77428.04,
+        "created_at": "2024-03-09 10:49:43"
+    },
+    {
+        "id": 88,
+        "title": "Wine - Casillero Del Diablo",
+        "price": 46954.98,
+        "created_at": "2024-08-05 05:39:14"
+    },
+    {
+        "id": 89,
+        "title": "Nougat - Paste \/ Cream",
+        "price": 64799.48,
+        "created_at": "2024-01-25 01:18:15"
+    },
+    {
+        "id": 90,
+        "title": "Water - Mineral, Carbonated",
+        "price": 60255.04,
+        "created_at": "2023-12-14 20:10:33"
+    },
+    {
+        "id": 91,
+        "title": "Cheese - Mozzarella, Shredded",
+        "price": 34512.06,
+        "created_at": "2024-04-07 05:29:16"
+    },
+    {
+        "id": 92,
+        "title": "Cheese - Comte",
+        "price": 47768.76,
+        "created_at": "2024-05-16 09:05:39"
+    },
+    {
+        "id": 93,
+        "title": "Cheese - Cheddar, Mild",
+        "price": 10975.43,
+        "created_at": "2024-04-20 10:06:24"
+    },
+    {
+        "id": 94,
+        "title": "Ecolab - Mikroklene 4\/4 L",
+        "price": 21126.68,
+        "created_at": "2024-07-13 05:29:43"
+    },
+    {
+        "id": 95,
+        "title": "Tomato Paste",
+        "price": 58736.05,
+        "created_at": "2024-06-06 17:44:49"
+    },
+    {
+        "id": 96,
+        "title": "Sauce - Vodka Blush",
+        "price": 19922.03,
+        "created_at": "2024-03-24 01:13:33"
+    },
+    {
+        "id": 97,
+        "title": "Bread - 10 Grain",
+        "price": 17395.47,
+        "created_at": "2023-12-25 14:08:11"
+    },
+    {
+        "id": 98,
+        "title": "Wine - Lamancha Do Crianza",
+        "price": 9022.99,
+        "created_at": "2024-07-18 12:36:25"
+    },
+    {
+        "id": 99,
+        "title": "Berry Brulee",
+        "price": 23533.43,
+        "created_at": "2024-02-19 00:38:55"
+    },
+    {
+        "id": 100,
+        "title": "Banana - Green",
+        "price": 99139.68,
+        "created_at": "2023-12-21 12:25:21"
+    }
+]
