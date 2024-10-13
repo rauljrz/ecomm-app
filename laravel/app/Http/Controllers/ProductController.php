@@ -11,6 +11,12 @@ class ProductController extends Controller
 {
     use Loggable;
 
+//     public function __construct()
+//     {
+//  //       $this->middleware('auth');
+//         $this->middleware('role:admin,editor')->only(['store', 'update', 'destroy']);
+//     }
+
     public function index(Request $request)
     {
         $page = $request->get('page', 1);
@@ -54,7 +60,7 @@ class ProductController extends Controller
         $product = Product::getProduct($id);
 
         if (!$product) {
-            return response()->json(['error' => 'Producto no encontrado'], 404);
+            return response()->json(['error' => 'Producto no encontrado para mostrar'], 404);
         }
 
         return response()->json($product);
@@ -65,7 +71,7 @@ class ProductController extends Controller
         $product = Product::getProduct($id);
 
         if (!$product) {
-            return redirect()->route('products.index')->with('error', 'Producto no encontrado.');
+            return redirect()->route('products.index')->with('error', 'Producto no encontrado para editar.');
         }
 
         return view('products.edit', compact('product'));

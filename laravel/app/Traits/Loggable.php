@@ -15,7 +15,7 @@ trait Loggable
         $clientIp = Request::ip();
 
         $logMessage = sprintf(
-            '[%s] User: %s (%s) %s %s%s',
+            '[%s] User: %s (id: %s) %s %s%s',
             $clientIp,
             $userName,
             $userId,

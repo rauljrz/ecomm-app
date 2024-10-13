@@ -3,17 +3,13 @@
 @section('content')
 <div class="container">
     <h1>Productos</h1>
-    {{-- <a href="{{ route('products.create') }}" class="btn btn-primary mb-3">Crear Nuevo Producto</a>
 
     <div class="mb-3">
-        <form id="search-form" class="form-inline">
-            <input type="text" id="search" class="form-control mr-2" placeholder="Buscar productos...">
-            <button type="submit" class="btn btn-outline-secondary">Buscar</button>
-        </form>
-    </div> --}}
-
-    <div class="mb-3">
-        <a href="{{ route('products.create') }}" class="btn btn-primary">Crear Nuevo Producto</a>
+        @if(!auth()->user()->hasRole('viewer'))
+            <a href="{{ route('products.create') }}" class="btn btn-primary">Crear Nuevo Producto</a>
+        @else
+            <a href="{{ route('products.create') }}" class="btn btn-primary">Crear Nuevo Producto</a>
+        @endif
     </div>
 
     <div class="card mb-4">
@@ -34,7 +30,9 @@
                 <th>Título</th>
                 <th>Precio</th>
                 <th>Fecha de Creación</th>
+            @if(!auth()->user()->hasRole('viewer'))
                 <th>Acciones</th>
+            @endif
             </tr>
         </thead>
         <tbody id="products-table-container">
@@ -64,6 +62,13 @@ $(document).ready(function() {
                 },
                 success: function(result) {
                     location.reload();
+                },
+                error: function(xhr) {
+                    if (xhr.status === 403) {
+                        alert('No tienes permiso para eliminar este producto. Solo los administradores pueden realizar esta acción.');
+                    } else {
+                        alert('Ha ocurrido un error al intentar eliminar el producto. Por favor, inténtalo de nuevo más tarde.');
+                    }
                 }
             });
         }

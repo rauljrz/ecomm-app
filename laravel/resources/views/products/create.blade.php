@@ -30,7 +30,7 @@ $(document).ready(function() {
             data: $(this).serialize(),
             success: function(result) {
                 alert('Producto creado con éxito');
-                window.location.href = '{{ route("products.index") }}';
+                window.location.href = '{{ route("products.store") }}';
             },
             error: function(xhr) {
                 var errors = xhr.responseJSON.errors;

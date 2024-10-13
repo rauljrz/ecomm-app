@@ -25,6 +25,11 @@
             <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
                 {{ $slot }}
             </div>
+            <div>
+                <b>Administrador:</b> admin@example.com / password <br>
+                <b>Editor:</b> editor@example.com / password<br>
+                <b>Viewer:</b> viewer@example.com / password<br>
+            </div>
         </div>
     </body>
 </html>
