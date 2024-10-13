@@ -56,8 +56,8 @@ COPY php/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 COPY supervisor/supervisord.conf /etc/supervisord.conf
 
 # Copy el instalador de Laravel
-COPY install.sh /opt
-RUN chmod +x /opt/install.sh
+# COPY install.sh /opt
+# RUN chmod +x /opt/install.sh
 
 # Set up permissions
 #RUN chown -R www-data:www-data /opt/laravel \
