@@ -10,5 +10,5 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./laravel:/opt/laravel
+      - ./ecomm-app:/opt/laravel
 
