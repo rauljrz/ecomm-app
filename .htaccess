@@ -2,3 +2,9 @@
     RewriteEngine On
     RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
+
+# Asegurarse de que el archivo .env no sea accesible
+<Files .env>
+    Order Allow,Deny
+    Deny from all
+</Files>
