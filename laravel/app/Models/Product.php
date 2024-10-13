@@ -14,8 +14,10 @@ class Product extends Model
     public static function getAllProducts()
     {
         $path = 'products.json';
+        if (!Storage::exists($path)) {
+            Storage::put($path, json_encode([]));
+        }
         $jsonContent = Storage::get($path);
-        # \Log::info('Contenido del archivo: ' . $jsonContent);
         return json_decode($jsonContent, true);
     }
 

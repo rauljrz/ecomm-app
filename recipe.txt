@@ -9,3 +9,5 @@ docker compose up -d --build
 docker exec -it app /bin/sh
 
 tail -f storage/logs/crud.log
+
+php artisan migrate:fresh --seed

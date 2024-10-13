@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\LogController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -11,6 +12,9 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/logs', [LogController::class, 'index'])->name('logs.index')->middleware('auth');
+Route::delete('/logs', [LogController::class, 'clear'])->name('logs.clear')->middleware('auth');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/products', [ProductController::class, 'index'])->name('products.index');

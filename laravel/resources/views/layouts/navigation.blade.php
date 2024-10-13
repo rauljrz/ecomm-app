@@ -13,9 +13,9 @@
                 <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('products.index') ? 'active' : '' }}" href="{{ route('products.index') }}">Productos</a>
                 </li>
-                {{-- <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('logs.index') ? 'active' : '' }}" href="{{ route('logs.index') }}">Logs</a>
-                </li> --}}
+                </li>
             </ul>
             <!-- Menú de usuario -->
             <ul class="navbar-nav">
